@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel='stylesheet' href='/stylesheets/base.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/navbar.css' />
+    <link rel='stylesheet' href='/stylesheets/post.css' />
+    <link rel='stylesheet' href='/stylesheets/side.css' />
+    <link rel='stylesheet' href='/stylesheets/newsfeed.css' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/js/ajax.js"></script>
+  </head>
+  <body>
+    {{> navbar }}
+    {{> side }}
+    <div class="newsfeed">
+      <!-- <form name="editprofile" method="post" action="/editprofile" class="editprofile"> -->
+      <ul>
+        <li> Name: <input type="text" value="{{{name}}}" name="name" class="name"> </li> 
+        <!-- <li> Username: <input type="text" value="{{{username}}}" name="username" class="username"> </li>  -->
+        <li> About Me: <input type="text" value="{{{about}}}" name="about" class="about"> </li>
+        <li> Phone Number: <input type="text" value="{{{phone}}}" name="phone" class="phone"> </li>
+        <li> Email: <input type="text" value="{{{email}}}" name="email" class="email"> </li>
+        <li> <button type="submit" class="editprofile-submit">Submit</button> </li>
+        <li> <p class="editprofile-output"> </p> </li>
+      </ul>
+      <!-- </form> -->
+    </div>
+  </body>
+</html>
