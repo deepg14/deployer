@@ -9,7 +9,8 @@ var mongoose = require('mongoose');
 var app = express();
 
 // database setup
-mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/test');
+//mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/test');
+mongoose.connect(process.env.PORT || 'mongodb://localhost/test');
 var connection = mongoose.connection;
 connection.on('error', console.error.bind(console, 'connection error:'));
 connection.on('connected', function() {
